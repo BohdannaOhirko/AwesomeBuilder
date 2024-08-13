@@ -1,0 +1,27 @@
+header {
+	padding: 15px 0;
+    background-color: #222;
+    .container{
+        display: flex;
+    }
+    .header-navigation{
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 18px;
+        gap: 24px;
+        margin: 0 100px;
+
+    }
+    a{
+        color: #fff;
+        text-decoration: none;
+        &:hover{
+            color: $hover-link;
+        }
+    }
+	.logo {
+		display: block;
+        max-width: 170px;
+	}
+}
