@@ -14,7 +14,7 @@ const cellFlatsFree=document.querySelector('#flats-free');
 const cellFlatsBooking=document.querySelector('#flats-booking');
 const cellFlatsSold=document.querySelector('#flats-sold');
 console.log(buildItem);//масив даних
-buildItem.forEach((object, index )=>{
+buildItem.forEach((object, index, array )=>{
     object.classList.add('new-class')
     console.log(object);
 })
