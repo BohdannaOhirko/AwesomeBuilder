@@ -28,8 +28,12 @@ const showInfornation = (cell, attr) =>
 		obj.addEventListener("mouseover", () => {
 			const value = obj.getAttribute(attr);
 			cell.innerText = value;
+			
 			console.log(cell, attr);
 		});
+
+
+		
 	});
 
 showInfornation(cellAddress, "data-address");
@@ -46,7 +50,17 @@ const calcInformation = () =>
 		let flatsFree = flats - (flatsBooking + flatsSold);
 		item.setAttribute("data-flats-free", flatsFree);
 		const dataFlatsFree = item.getAttribute("data-flats-free");
-		dataFlatsFree === "0" ? item.classList.add("sold") : undefined;
+		// dataFlatsFree === "0" ? (item.classList.add("sold"), item.setAttribute(["data-modal"], 'sold')) : undefined;
+		
+		if (dataFlatsFree === "0") {
+			item.classList.add('sold')
+			item.setAttribute('data-modal', 'sold')
+			item.addEventListener('click', (event) => {
+				event.preventDefault();
+			})
+		}
+	
+		
 	});
 
 calcInformation();
@@ -58,3 +72,19 @@ console.log(typeof null);
 // 	console.log("Number: ", x, y, z);
 // };
 // showNumber("value:x", "value:y", "value:z");
+
+
+// Конструкція else if
+// const x = 4
+
+// if (x === 1) {
+//     console.log("x едентичен 1");
+// } else if (x === 2) {
+//     console.log('x  больше либо равен 2');
+// } else if (x === 3) {
+//     console.log('x  больше либо равен 3');
+// } else if (x === 4) {
+//     console.log('x  больше либо равен 4');
+// } else {
+//     console.log("Любой другой случай");
+// }
