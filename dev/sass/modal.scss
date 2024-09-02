@@ -38,4 +38,19 @@
 .btn-row {
     margin-top: auto;
 }
+/**/
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 
+    input {
+        height: 48px;
+    }
+
+    &-column {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+}
